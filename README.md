@@ -51,6 +51,17 @@ python app.py
 http://127.0.0.1:5000
 ```
 
+## Deploy on Render
+
+This project includes a Render blueprint in `render.yaml` and a `Procfile` for the web service.
+
+Use these values on Render:
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`
+
+If you deploy from the blueprint, Render will read the included `render.yaml` automatically.
+
 ## API
 
 ### POST /correct
