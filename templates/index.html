@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Powered Autocorrect Tool</title>
+  <meta name="description" content="Correct spelling mistakes instantly using Artificial Intelligence and Natural Language Processing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="brand-mark">✦</span>
+        <span class="brand-name">AutoCorrect<span class="brand-dot">AI</span></span>
+      </div>
+      <span class="badge">Powered by NLP</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Artificial Intelligence • Natural Language Processing</span>
+      <h1 class="hero-title">AI-Powered <span class="gradient-text">Autocorrect Tool</span></h1>
+      <p class="hero-subtitle">
+        Correct spelling mistakes instantly using Artificial Intelligence and Natural Language Processing.
+      </p>
+    </section>
+
+    <section class="glass-card editor-card fade-in">
+      <label for="inputText" class="card-label">Your Text</label>
+      <textarea
+        id="inputText"
+        placeholder="Enter your text here..."
+        rows="7"
+        maxlength="5000"
+      ></textarea>
+
+      <div class="editor-footer">
+        <span id="charCounter" class="counter">0 / 5000 characters</span>
+        <div class="actions">
+          <button id="clearBtn" class="btn btn-ghost" type="button">Clear Text</button>
+          <button id="correctBtn" class="btn btn-primary" type="button">
+            <span class="btn-label">Correct Text</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="loading" class="loading hidden" role="status" aria-live="polite">
+        <div class="spinner"></div>
+        <p>Correcting your text...</p>
+      </div>
+
+      <div id="errorBox" class="error-box hidden" role="alert">
+        Unable to correct text.<br />Please try again.
+      </div>
+    </section>
+
+    <section id="resultSection" class="results hidden">
+      <div class="glass-card result-card fade-in">
+        <div class="result-head">
+          <span class="dot dot-original"></span>
+          <h3>Original Text</h3>
+        </div>
+        <p id="originalText" class="result-text"></p>
+      </div>
+
+      <div class="glass-card result-card highlight fade-in">
+        <div class="result-head">
+          <span class="dot dot-corrected"></span>
+          <h3>Corrected Text</h3>
+        </div>
+        <p id="correctedText" class="result-text"></p>
+        <button id="copyBtn" class="btn btn-accent" type="button">Copy Corrected Text</button>
+        <span id="copyMsg" class="copy-msg hidden">Copied Successfully!</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-title">AI-Powered Autocorrect Tool</p>
+      <p class="footer-sub">Built with HTML, CSS, JavaScript, Python Flask, and TextBlob</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
