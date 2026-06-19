@@ -59,6 +59,7 @@ Use these values on Render:
 
 - Build command: `pip install -r requirements.txt`
 - Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`
+- Python version: `3.11.10` via `.python-version`
 
 If you deploy from the blueprint, Render will read the included `render.yaml` automatically.
 
