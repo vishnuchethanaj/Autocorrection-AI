@@ -1,10 +1,10 @@
 # AI-Powered Autocorrect Tool
 
-A modern Flask web application that corrects spelling mistakes in real time using TextBlob and a responsive HTML/CSS/JavaScript frontend.
+A modern Flask web application that corrects spelling mistakes in real time using pyspellchecker and a responsive HTML/CSS/JavaScript frontend.
 
 ## Features
 
-- AI-assisted spelling correction
+- AI-assisted spelling correction with protected technical terms
 - Flask backend with REST API
 - Responsive, modern UI
 - Copy corrected text button
@@ -15,7 +15,7 @@ A modern Flask web application that corrects spelling mistakes in real time usin
 
 - Frontend: HTML5, CSS3, JavaScript
 - Backend: Python, Flask, Flask-CORS
-- NLP: TextBlob
+- NLP: pyspellchecker
 
 ## Project Structure
 
@@ -39,19 +39,13 @@ AutocorrectTool/
 pip install -r requirements.txt
 ```
 
-2. Download the required TextBlob corpora:
-
-```bash
-python -m textblob.download_corpora
-```
-
-3. Run the app:
+2. Run the app:
 
 ```bash
 python app.py
 ```
 
-4. Open the app in your browser:
+3. Open the app in your browser:
 
 ```text
 http://127.0.0.1:5000
