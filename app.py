@@ -29,6 +29,7 @@ PROTECTED_WORDS = {
 }
 
 COMMON_CORRECTIONS = {
+    "hye": "hey",
     "applicaton": "application",
     "learning": "learning",
     "programing": "programming",
